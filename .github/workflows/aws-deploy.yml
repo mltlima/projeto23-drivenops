@@ -7,3 +7,12 @@ on:
 jobs:
   AwsDeploy:
     runs-on: self-hosted
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Kill docker container
+        run: docker-compose down
+      - name: Pull from Github
+        run: git pull
+      - name: Build docker
+        run: docker-compose up -d --build
