@@ -17,7 +17,6 @@ jobs:
           envkey_POSTGRES_PASSWORD: ${{secrets.POSTGRES_PASSWORD}}
           envkey_POSTGRES_DB: ${{secrets.POSTGRES_DB}}
           envkey_DATABASE_URL: ${{secrets.DATABASE_URL}}
-          directory: /
           file_name: .env
       - name: Create front .env
         uses: SpicyPizza/create-envfile@v1.3
